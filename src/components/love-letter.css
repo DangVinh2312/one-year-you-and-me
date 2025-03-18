@@ -10,15 +10,18 @@
 }
 
 .love-letter__title {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 2rem;
   margin: 0;
+  font-family: 'SendFlowers_Regular', sans-serif;
+  font-weight: bolder;
 }
 
 .love-letter__message {
   padding: 0 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
   text-align: center;
+  font-family: 'MeowScript_Regular', sans-serif;
 }
 
 .love-letter__image {
@@ -85,13 +88,16 @@
 }
 
 .love-letter__modal-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 0;
   padding: 0.2rem 1rem;
+  font-size: 2rem;
+  margin: 0;
+  font-family: 'SendFlowers_Regular', sans-serif;
+  font-weight: bolder;
 }
 
 .love-letter__modal-message {
   padding: 0 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  font-family: 'MeowScript_Regular', sans-serif;
 }

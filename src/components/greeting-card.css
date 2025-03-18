@@ -19,9 +19,18 @@
 }
 
 .greeting-card__title {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 2rem;
   margin: 0;
+  font-family: 'SendFlowers_Regular', sans-serif;
+  font-weight: bolder;
+}
+
+.greeting-card__message {
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-align: center;
+  font-family: 'MeowScript_Regular', sans-serif;
 }
 
 .greeting-card__image {
@@ -29,12 +38,6 @@
   width: 150px;
   height: 150px;
   object-fit: cover;
-}
-
-.greeting-card__message {
-  padding: 0 1rem;
-  font-size: 1rem;
-  text-align: center;
 }
 
 .greeting-card__button {
