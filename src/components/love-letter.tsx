@@ -42,8 +42,7 @@ function LoveLetter() {
                   <h2 className='love-letter__modal-title'>Gửi Uyên!</h2>
                   <TextPullup
                     classNames='love-letter__modal-message'
-                    text='Vậy là một năm đã trôi qua rồi! Tớ và Uyên đã có những kỉ niệm đẹp, cũng có những hạnh phúc và cũng
-                    có những muộn phiền. Cùng nhau vượt qua và trở nên tốt hơn nhé. Tớ yêu Uyên nhiều lắm!'
+                    text='Vậy là một năm đã trôi qua rồi! Tớ và Uyên đã có những kỉ niệm đẹp, cũng có những hạnh phúc và cũng có những muộn phiền. Cùng nhau vượt qua và trở nên tốt hơn nhé. Tớ yêu Uyên nhiều lắm!'
                     duration={0.5}
                   />
                 </div>
