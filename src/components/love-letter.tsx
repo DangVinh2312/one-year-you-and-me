@@ -4,11 +4,13 @@ import { useState } from 'react';
 import TextPullup from './text-pullup';
 
 import coupleImage from '../assets/images/cute_couple_love.jpg';
+import kissHerImage from '../assets/images/kiss_her.jpg';
 import heartWobblyGif from '../assets/images/heart_wobbly.gif';
 
 import './love-letter.css';
 
 function LoveLetter() {
+  const [showKiss, setShowKiss] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   function handleOpenLetter() {
     setOpenModal(true);
@@ -73,20 +75,44 @@ function LoveLetter() {
       </AnimatePresence>
       <h1 className='love-letter__title'>Lá thư tình iu!</h1>
       <p className='love-letter__message'>Bạn yêu nhận được một bức thư nè!</p>
-      <motion.img
-        className='love-letter__image'
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-          transition: {
-            duration: 2,
-          },
-        }}
-        src={coupleImage}
-        alt='couple'
-      />
+      <div className='love-letter__image-container'>
+        <motion.img
+          className='love-letter__image'
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+            transition: {
+              duration: 2,
+            },
+          }}
+          src={coupleImage}
+          alt='couple'
+          onClick={() => setShowKiss(!showKiss)}
+        />
+        <AnimatePresence>
+          {showKiss && (
+            <motion.img
+              className='love-letter__image--kiss'
+              initial={{
+                scale: 0,
+              }}
+              animate={{
+                scale: 1,
+                transition: {
+                  duration: 2,
+                },
+              }}
+              exit={{
+                scale: 0,
+              }}
+              src={kissHerImage}
+              alt='couple'
+            />
+          )}
+        </AnimatePresence>
+      </div>
       <motion.button
         initial={{
           scale: 0,

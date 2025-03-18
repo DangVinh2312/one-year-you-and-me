@@ -39,7 +39,20 @@ function GreetingCard({ onClick }: Readonly<{ onClick: () => void }>) {
         />
       </div>
       <div className='greeting-card__image-wrapper'>
-        <img className='greeting-card__image--dancing-cat' src={dancingCatGif} alt='dancing cat' />
+        <motion.img
+          initial={{
+            width: 0,
+          }}
+          animate={{
+            width: 80,
+            transition: {
+              duration: 4,
+            },
+          }}
+          className='greeting-card__image--dancing-cat'
+          src={dancingCatGif}
+          alt='dancing cat'
+        />
         <motion.img
           className='greeting-card__image'
           src={coupleImage}
@@ -53,7 +66,20 @@ function GreetingCard({ onClick }: Readonly<{ onClick: () => void }>) {
             },
           }}
         />
-        <img className='greeting-card__image--dancing-cat' src={dancingCatGif} alt='dancing cat' />
+        <motion.img
+          initial={{
+            width: 0,
+          }}
+          animate={{
+            width: 80,
+            transition: {
+              duration: 4,
+            },
+          }}
+          className='greeting-card__image--dancing-cat'
+          src={dancingCatGif}
+          alt='dancing cat'
+        />
       </div>
       <DatetimeCounter />
       <button className='greeting-card__button' onClick={onClick}>

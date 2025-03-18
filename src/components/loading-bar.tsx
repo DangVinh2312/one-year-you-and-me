@@ -105,7 +105,13 @@ function LoadingBar({ onClick }: Readonly<{ onClick?: () => void }>) {
 
       <AnimatePresence>
         {!isComplete ? (
-          <motion.p id="loading-love__message" className='loading-love-text' initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}>
+          <motion.p
+            id='loading-love__message'
+            className='loading-love-text'
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
+          >
             LOADING LOVE{' '}
             {'...'.split('').map((char, i) => (
               <motion.span
@@ -123,7 +129,7 @@ function LoadingBar({ onClick }: Readonly<{ onClick?: () => void }>) {
           <motion.button
             className='click-me-button'
             initial={{ scale: 0 }}
-            animate={{ scale: 1, transition: { duration: 2 } }}
+            animate={{ scale: 1, transition: { duration: 0.5 } }}
             exit={{ scale: 0 }}
             onClick={onClick}
           >
