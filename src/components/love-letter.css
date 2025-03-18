@@ -1,0 +1,97 @@
+.love-letter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  gap: 1rem;
+}
+
+.love-letter__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.love-letter__message {
+  padding: 0 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.love-letter__image {
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  padding: 10px;
+  background-color: white;
+}
+
+.love-letter__button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.love-letter__modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.love-letter__modal-wrapper {
+  height: 40%;
+  width: 80%;
+  background-color: white;
+  rotate: 10deg;
+  border-radius: 30px;
+}
+
+.love-letter__modal-background {
+  height: 100%;
+  width: 100%;
+  background-color: #e4c8d2;
+  border-radius: 30px;
+  rotate: -10deg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.love-letter__modal-border {
+  width: 94%;
+  height: 92%;
+  border: 2px dashed #e48fad;
+  border-radius: 30px;
+}
+
+.love-letter__modal-button--close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.love-letter__modal-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.2rem 1rem;
+}
+
+.love-letter__modal-message {
+  padding: 0 1rem;
+  font-size: 1rem;
+}
