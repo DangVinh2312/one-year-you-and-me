@@ -1,14 +1,34 @@
 import { motion } from 'framer-motion';
-import coupleImage from '../assets/images/cute_couple.jpeg';
 import DatetimeCounter from './datetime-counter';
 import HeartRain from './heart-rain';
 import TextPullup from './text-pullup';
+
+import coupleImage from '../assets/images/cute_couple.jpeg';
+import dancingCatGif from '../assets/images/dancing_cat.gif';
 
 import './greeting-card.css';
 
 function GreetingCard({ onClick }: Readonly<{ onClick: () => void }>) {
   return (
-    <div className='greeting-card'>
+    <motion.div
+      id='greeting-card'
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+        transition: {
+          duration: 1,
+        },
+      }}
+      exit={{
+        opacity: 0,
+        transition: {
+          duration: 1,
+        },
+      }}
+      className='greeting-card'
+    >
       <HeartRain />
       <div className='greeting-card__header'>
         <h1 className='greeting-card__title'>Chúc mừng ngày kỉ niệm!</h1>
@@ -18,7 +38,8 @@ function GreetingCard({ onClick }: Readonly<{ onClick: () => void }>) {
           duration={0.5}
         />
       </div>
-      <div>
+      <div className='greeting-card__image-wrapper'>
+        <img className='greeting-card__image--dancing-cat' src={dancingCatGif} alt='dancing cat' />
         <motion.img
           className='greeting-card__image'
           src={coupleImage}
@@ -32,12 +53,13 @@ function GreetingCard({ onClick }: Readonly<{ onClick: () => void }>) {
             },
           }}
         />
+        <img className='greeting-card__image--dancing-cat' src={dancingCatGif} alt='dancing cat' />
       </div>
       <DatetimeCounter />
       <button className='greeting-card__button' onClick={onClick}>
         Đi tiếp thui nào! 🚀
       </button>
-    </div>
+    </motion.div>
   );
 }
 

@@ -34,11 +34,21 @@
   font-family: 'MeowScript_Regular', sans-serif;
 }
 
+.greeting-card__image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .greeting-card__image {
   border-radius: 50%;
   width: 150px;
   height: 150px;
   object-fit: cover;
+}
+
+.greeting-card__image--dancing-cat {
+  width: 80px;
+  object-fit: contain;
 }
 
 .greeting-card__button {

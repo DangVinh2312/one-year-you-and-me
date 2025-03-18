@@ -89,7 +89,7 @@
 
 .love-letter__modal-title {
   padding: 0.2rem 1rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 0;
   font-family: 'SendFlowers_Regular', sans-serif;
   font-weight: bolder;
@@ -101,4 +101,12 @@
   line-height: normal;
   font-weight: bolder;
   font-family: 'MeowScript_Regular', sans-serif;
+}
+
+.love-letter__modal-heart-wobbly {
+  position: absolute;
+  bottom: 8%;
+  right: 8%;
+  width: 20%;
+  animation: wobble 1s infinite;
 }

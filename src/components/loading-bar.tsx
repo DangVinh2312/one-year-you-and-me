@@ -123,7 +123,7 @@ function LoadingBar({ onClick }: Readonly<{ onClick?: () => void }>) {
           <motion.button
             className='click-me-button'
             initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
+            animate={{ scale: 1, transition: { duration: 2 } }}
             exit={{ scale: 0 }}
             onClick={onClick}
           >
