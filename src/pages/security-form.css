@@ -1,0 +1,67 @@
+.security-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  gap: 0.5rem;
+}
+
+.security-form__wrapper {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.security-form__emotion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.security-form__emotion-gif {
+  height: 35px;
+}
+
+.security-form__passcode {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.security-form__passcode--slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  color: black;
+  background-color: white;
+}
+
+.security-form__delete-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.security-form__keyboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.security-form__keyboard--zero {
+  grid-column: 1 / span 2;
+}

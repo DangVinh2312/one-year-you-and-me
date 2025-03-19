@@ -1,13 +1,14 @@
+import './love-letter.css';
+
+import coupleImage from '../assets/images/cute_couple_love.jpg';
+import heartWobblyGif from '../assets/images/heart_wobbly.gif';
+import kissHerImage from '../assets/images/kiss_her.jpg';
+
 import { IconX } from '@tabler/icons-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
-import TextPullup from './text-pullup';
-
-import coupleImage from '../assets/images/cute_couple_love.jpg';
-import kissHerImage from '../assets/images/kiss_her.jpg';
-import heartWobblyGif from '../assets/images/heart_wobbly.gif';
-
-import './love-letter.css';
+import StepWrapper from '../components/step-wrapper';
+import TextPullup from '../components/text-pullup';
 
 function LoveLetter() {
   const [showKiss, setShowKiss] = useState(false);
@@ -17,24 +18,7 @@ function LoveLetter() {
   }
 
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-        transition: {
-          duration: 1,
-        },
-      }}
-      exit={{
-        opacity: 0,
-        transition: {
-          duration: 1,
-        },
-      }}
-      className='love-letter'
-    >
+    <StepWrapper className='love-letter'>
       <AnimatePresence>
         {openModal && (
           <motion.div
@@ -85,6 +69,7 @@ function LoveLetter() {
             opacity: 1,
             transition: {
               duration: 2,
+              delay: 0.5,
             },
           }}
           src={coupleImage}
@@ -128,7 +113,7 @@ function LoveLetter() {
       >
         Mở thư nào!
       </motion.button>
-    </motion.div>
+    </StepWrapper>
   );
 }
 

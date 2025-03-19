@@ -1,8 +1,10 @@
+import './loading-bar.css';
+
 import { IconHeartFilled } from '@tabler/icons-react';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
-import HeartScale from './heart-scale';
-import './loading-bar.css';
+import HeartScale from '../components/heart-scale';
+import StepWrapper from '../components/step-wrapper';
 
 function LoadingBar({ onClick }: Readonly<{ onClick?: () => void }>) {
   const [progress, setProgress] = useState(0);
@@ -81,7 +83,7 @@ function LoadingBar({ onClick }: Readonly<{ onClick?: () => void }>) {
   }, [progress]);
 
   return (
-    <div className='loading'>
+    <StepWrapper className='loading'>
       <HeartScale duration={5} />
       <div className='loading-love-pointer-container'>
         <motion.div className='loading-love-pointer' animate={loadingPointerControls}>
@@ -137,7 +139,7 @@ function LoadingBar({ onClick }: Readonly<{ onClick?: () => void }>) {
           </motion.button>
         )}
       </AnimatePresence>
-    </div>
+    </StepWrapper>
   );
 }
 
