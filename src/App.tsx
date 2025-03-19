@@ -9,7 +9,7 @@ import SecurityCheck from './pages/security-form';
 import TheEnd from './pages/the-end';
 
 function App() {
-  const [step, setStep] = useState(3);
+  const [step, setStep] = useState(0);
 
   const renderStep = () => {
     switch (step) {
