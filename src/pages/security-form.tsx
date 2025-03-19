@@ -91,7 +91,7 @@ function SecurityForm({ onClick }: Readonly<{ onClick: () => void }>) {
         <div className='security-form__passcode'>
           {Array.from({ length: 4 }).map((_, i) => (
             <div key={i + 1} className='security-form__passcode--slot'>
-              {passcode[i] ? <IconAsterisk size={10} /> : ''}
+              {passcode[i] != undefined ? <IconAsterisk size={10} /> : ''}
             </div>
           ))}
         </div>
