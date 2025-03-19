@@ -6,9 +6,10 @@ import './App.css';
 import GreetingCard from './pages/greeting-card';
 import LoadingBar from './pages/loading-bar';
 import SecurityCheck from './pages/security-form';
+import TheEnd from './pages/the-end';
 
 function App() {
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(3);
 
   const renderStep = () => {
     switch (step) {
@@ -19,17 +20,15 @@ function App() {
       case 2:
         return <GreetingCard onClick={() => setStep(3)} />;
       case 3:
-        return <LoveLetter />;
+        return <LoveLetter onClick={() => setStep(4)} />;
+      case 4:
+        return <TheEnd />;
       default:
         return;
     }
   };
 
-  return (
-    <div id='root'>
-      <AnimatePresence>{renderStep()}</AnimatePresence>
-    </div>
-  );
+  return <AnimatePresence>{renderStep()}</AnimatePresence>;
 }
 
 export default App;
